@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background-color: rgb(226, 226, 226);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #container-title {
+            height: 60px;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0px 5px 5px -8px #666;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #title {
+            width: 100%;
+            height: auto;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #back {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            padding: 15px;
+        }
+
+        #container-tab {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .tab-item-text {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .tab-item {
+            width: 100%;
+            /* flex-grow: 1; */
+            text-align: center;
+            color: #666;
+        }
+
+        #tab-item-indicator {
+            width: 33%;
+            height: 2px;
+            margin-left: 67%;
+            background-color: rgb(83, 178, 178);
+        }
+
+        #container-list {
+            width: 96%;
+            height: 0px;
+            flex-grow: 1;
+            margin: 2%;
+            overflow-y: scroll;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0px 0px 6px -2px rgb(181, 181, 181);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .list-divider {
+            height: 1px;
+            padding: 0 20px 0 20px;
+            flex-shrink: 0;
+        }
+
+        .list-divider-line {
+            height: 1px;
+            background-color: rgb(245, 245, 245);
+        }
+
+        .list-item {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .list-item-header {
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .item-text {
+            font-size: 14px;
+        }
+
+        .item-child {
+            display: flex;
+            align-items: center;
+            height: 30px;
+        }
+
+        .list-item-tag {
+            font-size: 10px;
+            padding: 4px;
+            color: white;
+            background-color: rgb(83, 178, 178);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container-title">
+        <span id="title">我的任务单</span>
+        <img id="back" src="back.png">
+    </div>
+
+    <div id="container-tab">
+        <div class="tab-item-text">
+            <div class="tab-item" id="tab-1">我的待办</div>
+            <div class="tab-item" id="tab-2">处理过的</div>
+            <div class="tab-item" id="tab-3">全部</div>
+        </div>
+        <div id="tab-item-indicator"></div>
+    </div>
+    <div id="container-list">
+
+    </div>
+
+    <script src="./pratice_js_old.js"></script>
+
+</body>
+
+</html>
